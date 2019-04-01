@@ -1,0 +1,33 @@
+header .top {
+	background-color: #9a7886;
+}
+#content .pricing-heading {
+	background-color: #9a7886;
+}
+#content .pricing-action {
+	background-color: #9cb58d;
+}
+#content .pricing-action .btn {
+	background-color: green;
+}
+#content .pricing-terms {
+	background-color: #9cb58d;
+}
+footer {
+	background-color: #9a7886;
+	color: black;
+}
+#sub-footer {
+	background-color: #9cb58d;
+}
+#sub-footer span {
+	color: black;
+}
+#callBack{
+	background-color: white;
+	opacity: 0.8;
+	padding: 10px;
+}
+i.icon-bgdark.active {
+	background-color: #9a7886;
+  }
