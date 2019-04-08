@@ -47,15 +47,14 @@
       <div class="top">
         <div class="container">
           <div class="row">
-            <div class="span6">
+            <div class="span4">
               <p class="topcontact"><i class="icon-phone"></i> +7 926 689 16 58</p>
             </div>
             <div class="span6">
+              <p class="topcontact"><i class="icon-envelope-alt"></i> ggggg@jhhhh.com</p>
+	    </div>
+	      <div class="span2">
 
-              <ul class="social-network">
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Google +"><i class="icon-google-plus icon-white"></i></a></li>
-              </ul>
 
             </div>
           </div>
@@ -89,17 +88,11 @@
             <div class="container">
               <div class="row">
                 <div class="span5">
-		   <form id="callBack">
-                  <h2 class="animated fadeInDown"><strong>Клининг <span class="colored">Леди чистоты</span></strong></h2>
-		    <div class="form-group">
-			<label for="exampleInputEmail1">Количество комнат</label>
-			   <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-			<label for="exampleInputEmail1">Количество санузла</label>
-			   <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-			<label for="exampleInputEmail1">Телефон</label>
-			   <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-			</div>
-			    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
+                  <h2 class="animated fadeInDown"><strong>Клининг <span class="logotip">Леди чистоты</span></strong></h2>
+		   <form id="callBack" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+		    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
 		  </form>
                 </div>
               </div>
@@ -113,11 +106,14 @@
             <div class="container">
               <div class="row">
                 <div class="span6">
-                  <h2 class="animated fadeInDown"><strong>Клининг <span class="colored">Леди Чистоты</span></strong></h2>
-		  <h3>Используем экологически чистые средства</h3>
-                  <form>
-                    <div class="input-append">
-                      <input class="span3 input-large" type="text">
+                  <h2 class="animated fadeInDown"><strong>Клининг <span class="logotip">Леди Чистоты</span></strong></h2>
+		  <h3>Мы соединяем чистоту и экологию</h3>
+		  <h3>Проффесионально сделаем уборку всех помещений</h3>
+		</div>
+		<div class='span6'>
+                  <form id="Short">
+                    {% csrf_token %}
+                    {{ shortForm }}
                       <button class="btn btn-theme btn-large" type="submit">Заказать уборку</button>
                     </div>
                   </form>
@@ -395,6 +391,9 @@
               <p>
                 Введите ваш телефон и в ближайшее время мы с вами свяжемся
               </p>
+	    </div>
+	  </div>
+	  <div class="span4">
               <form class="subscribe">
                 <div class="input-append">
                   <input class="span2" id="appendedInputButton" type="text">

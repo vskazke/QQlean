@@ -31,3 +31,10 @@ footer {
 i.icon-bgdark.active {
 	background-color: #9a7886;
   }
+#Short {
+	padding-top: 50%;
+}
+.logotip {
+	color: white;
+	font-style: oblique;
+}
