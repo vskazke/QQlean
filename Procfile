@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web:  gunicorn nastory.wsgi --log-file -
+web:  gunicorn QQlean.wsgi --log-file -
