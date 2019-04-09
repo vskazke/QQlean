@@ -1,3 +1,6 @@
+ul {
+	list-style-type: none;
+}
 header .top {
 	background-color: #9a7886;
 	padding-bottom; 0;
