@@ -38,6 +38,25 @@ def index(request):
         else:
             print('No')
             return HttpResponse('Make sure all fields are entered and valid.')
+    shortform = ShortForm(request.POST or None)
+    #  form_captcha = DemoForm(request.POST or None)
+    if request.method == "POST" and shortform.is_valid():
+        new = shortform.save()
+        phone = request.POST['phone']
+        
+        s = ShortForm(phone=phone)
+        s.save()
+        print(q)
+        if phone:
+            try:
+                send_mail(phone, "phone: %s" % (phone),
+                          settings.EMAIL_HOST_USER, ['aleksauto.info@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponse('sucsess')
+        else:
+            print('No')
+            return HttpResponse('Make sure all fields are entered and valid.')
 
     return render(request, 'index.html', locals())
 

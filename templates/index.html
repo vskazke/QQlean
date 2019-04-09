@@ -113,7 +113,7 @@
 		<div class='span6'>
                   <form id="Short">
                     {% csrf_token %}
-                    {{ shortForm }}
+                    {{ shortform.as_ul }}
                       <button class="btn btn-theme btn-large" type="submit">Заказать уборку</button>
                     </div>
                   </form>
