@@ -60,18 +60,6 @@
           </div>
         </div>
       </div>
-      <div class="container">
-
-
-        <div class="row nomargin">
-          <div class="span4">
-            <div class="logo">
-		    <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" /></a>
-            </div>
-              <!-- end navigation -->
-          </div>
-        </div>
-      </div>
     </header>
     <!-- end header -->
 
@@ -89,7 +77,7 @@
               <div class="row">
                 <div class="span5">
                   <h2 class="animated fadeInDown"><strong>Клининг <span class="logotip">Леди чистоты</span></strong></h2>
-		   <form id="callBack" method="post">
+		   <form class ="hidden-phone" id="callBack" method="post">
                     {% csrf_token %}
                     {{ form }}
 		    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
@@ -128,6 +116,13 @@
       <!-- slideshow end here -->
 
     </section>
+    <div class="visible-phone">
+		   <form id="callBack" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+		    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
+		  </form>
+    </div>
     <!-- /section featured -->
 
     <section id="content">
@@ -217,7 +212,8 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
-                    <a href="#" class="btn btn-medium btn-success"><i class="icon-chevron-down"></i> Заказать</a>
+                    {{ shortform.as_ul }}
+                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -237,7 +233,8 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
-                    <a href="#" class="btn btn-medium btn-success"><i class="icon-chevron-down"></i> Заказать</a>
+                    {{ shortform.as_ul }}
+                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -249,15 +246,22 @@
                   </div>
                   <div class="pricing-content">
                     <ul>
-                      <li><i class="icon-ok"></i> 100 applications</li>
-                      <li><i class="icon-ok"></i> 24x7 support available</li>
-                      <li><i class="icon-ok"></i> No hidden fees</li>
-                      <li><i class="icon-ok"></i> Free 30-days trial</li>
-                      <li><i class="icon-ok"></i> Stop anytime easily</li>
+<li> Ежедневная уборка на контрактной основе от 45 руб. м2</li>
+<li> Ежедневная уборка торговых и производственных помещений на контрактной основе от 50 руб. м2</li>
+<li> Генеральная уборка после ремонта от 90 руб. м2</li>
+<li> Комплексная уборка офисов от 50 руб. м2</li>
+<li> Уборка после пожара от 300 руб. м2</li>
+<li> Уборка складских помещений после пожара от 250 руб. м2</li>
+<li> Очистка крыш от снега и наледи от 40 руб. м2</li>
+<li> Уборка прилегающих территорий в холодное время года с 1 ноября по 31 марта от 40 руб. м2</li>
+<li> Уборка прилегающих территорий в тёплое время года с 1 апреля по 31 октября от 30 руб. м2</li>
+<li> Вывоз мусора от 5000 руб. контейнер</li>
+<li> Вывоз снега от 5000 руб. контейнер</li>
                     </ul>
                   </div>
                   <div class="pricing-action">
-                    <a href="#" class="btn btn-medium btn-success"><i class="icon-chevron-down"></i> Заказать</a>
+                    {{ shortform.as_ul }}
+                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -265,19 +269,26 @@
               <div class="span3">
                 <div class="pricing-box-wrap animated flyIn">
                   <div class="pricing-heading">
-                    <h3>Just <strong>Happy</strong></h3>
+                    <h3>Мытье <strong>Окон</strong></h3>
                   </div>
                   <div class="pricing-content">
                     <ul>
-                      <li><i class="icon-ok"></i> 100 applications</li>
-                      <li><i class="icon-ok"></i> 24x7 support available</li>
-                      <li><i class="icon-ok"></i> No hidden fees</li>
-                      <li><i class="icon-ok"></i> Free 30-days trial</li>
-                      <li><i class="icon-ok"></i> Stop anytime easily</li>
+<li> До 100 м2 от 250 руб. м2</li>
+<li> В жилых квартирах и домах от 250 руб. м2</li>
+<li> От 200 м2 до 1000 м2 от 150 руб. м2</li>
+<li> От 1000 м2 и выше от 80 руб. м2</li>
+<li> С применением высотных работ от 2000 м2 от 75 руб. м2</li>
+<li> Мойка окон с применением высотных работ от 2000 м2 от 75 руб. м2</li>
+<li> После ремонта от 300 руб. м2</li>
+<li> После строя и капитального ремонта от 500 руб. м2</li>
+<li> Мойка витрин и вывесок от 55 руб. м2</li>
+<li> Мойка фасадов от 50 руб. м2</li>
+<li> Мойка тротуаров с применением роторной машины от 50 руб. м2</li>
                     </ul>
                   </div>
                   <div class="pricing-action">
-                    <a href="#" class="btn btn-medium btn-success"><i class="icon-chevron-down"></i> Заказать</a>
+                    {{ shortform.as_ul }}
+                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -397,7 +408,7 @@
 	  <div class="span4">
               <form class="subscribe">
                 <div class="input-append">
-                  <input class="span2" id="appendedInputButton" type="text">
+                    {{ shortform.as_ul }}
                   <button class="btn btn-success" type="submit">Заказать звонок</button>
                 </div>
               </form>
