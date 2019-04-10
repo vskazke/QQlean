@@ -99,10 +99,10 @@
 		  <h3>Проффесионально сделаем уборку всех помещений</h3>
 		</div>
 		<div class='span6'>
-                  <form id="Short">
+                  <form id="Short" method="post">
                     {% csrf_token %}
                     {{ shortform.as_ul }}
-                      <button class="btn btn-theme btn-large" type="submit">Заказать уборку</button>
+                      <button class="btn btn-theme btn-large"  name ="short" type="submit">Заказать уборку</button>
                     </div>
                   </form>
                 </div>
@@ -212,9 +212,12 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
+			  <form method = "post">
+                    {% csrf_token %}
                     {{ shortform.as_ul }}
-                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
-                  </div>
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
                 </div>
               </div>
 
@@ -233,9 +236,12 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
+			  <form method = "post">
+                    {% csrf_token %}
                     {{ shortform.as_ul }}
-                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
-                  </div>
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
                 </div>
               </div>
 
@@ -260,9 +266,12 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
+			  <form method="post">
+                    {% csrf_token %}
                     {{ shortform.as_ul }}
-                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
-                  </div>
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
                 </div>
               </div>
 
@@ -287,9 +296,12 @@
                     </ul>
                   </div>
                   <div class="pricing-action">
+			  <form method="post">
+                    {% csrf_token %}
                     {{ shortform.as_ul }}
-                    <a href="#" class="btn btn-medium btn-success"> Заказать звонок</a>
-                  </div>
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
                 </div>
               </div>
             </div>
