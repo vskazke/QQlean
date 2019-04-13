@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% load static %}
+  <meta charset="utf-8">
+  <title>Леди чистоты - клининг</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your page description here" />
+  <meta name="author" content="" />
+
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/camera.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/style2.css' %}" rel="stylesheet" />
+
+  <!-- Theme skin -->
+  <link href="{% static 'color/default.css' %}" rel="stylesheet" />
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
+
+  <!-- =======================================================
+    Theme Name: Eterna
+    Theme URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <!-- start header -->
+    <header>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="span4">
+              <p class="topcontact"><i class="icon-phone"></i> +7 926 689 16 58</p>
+            </div>
+            <div class="span6">
+              <p class="topcontact"><i class="icon-envelope-alt"></i> ggggg@jhhhh.com</p>
+	    </div>
+	      <div class="span2">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- section featured -->
+    <section id="featured">
+
+      <!-- slideshow start here -->
+
+      <div class="camera_wrap" id="camera-slide">
+
+        <!-- slide 1 here -->
+	<div data-src="{% static 'img/slides/camera/slide1/img1.jpg' %}">
+          <div class="camera_caption fadeFromLeft">
+            <div class="container">
+              <div class="row">
+                <div class="span5">
+                  <h2 class="animated fadeInDown"><strong>Клининг <span class="logotip">Леди чистоты</span></strong></h2>
+		   <form class ="hidden-phone" id="callBack" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+		    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
+		  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slide 2 here -->
+	<div data-src="{% static 'img/slides/camera/slide2/img1.jpg' %}">
+          <div class="camera_caption fadeFromLeft">
+            <div class="container">
+              <div class="row">
+                <div class="span6">
+                  <h2 class="animated fadeInDown"><strong>Клининг <span class="logotip">Леди Чистоты</span></strong></h2>
+		  <h3>Мы соединяем чистоту и экологию</h3>
+		  <h3>Проффесионально сделаем уборку всех помещений</h3>
+		</div>
+		<div class='span6'>
+                  <form id="Short" method="post">
+                    {% csrf_token %}
+                    {{ shortform.as_ul }}
+                      <button class="btn btn-theme btn-large"  name ="short" type="submit">Заказать уборку</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <!-- slideshow end here -->
+
+    </section>
+    <div class="visible-phone">
+		   <form id="callBack" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+		    <button type="submit" class="btn btn-success btn-large">Заказать звонок</button>
+		  </form>
+    </div>
+    <!-- /section featured -->
+
+    <section id="content">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span4">
+                <div class="box flyLeft">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgdark icon-star active icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Высокое <strong>Качество</strong></h4>
+                    <p>
+                      Мы выполняем каждый заказ по строгому регламенту и быстро откликаемся на любые предложения и жалобы
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span4">
+                <div class="box flyIn">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgdark icon-dropbox active icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Эко <strong>Средства </strong></h4>
+                    <p>
+                      Используем только экологически чистые средства высокого качества очистки
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="box flyRight">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgdark icon-laptop active icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Проверенные <strong>Исполнители</strong></h4>
+                    <p>
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span12">
+            <div class="solidline"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span12">
+                <div class="aligncenter">
+                  <h3>Наши <strong>Цены</strong></h3>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+
+              <div class="span3">
+                <div class="pricing-box-wrap animated-fast flyIn">
+                  <div class="pricing-heading">
+                    <h3>Уборка <strong>Квартир</strong></h3>
+                  </div>
+                  <div class="pricing-content">
+                    <ul>
+                      <li> Генеральная от 100 руб. м2</li>
+                      <li> Уборка после ремонта от 100 руб. м2</li>
+                      <li> Поддерживающая уборка 1 раз в неделю от 2500 руб. кв</li>
+                      <li> Уборка после пожара от 300 руб. м2</li>
+                      <li> Поддерживающая уборка от 50 руб. м2</li>
+                      <li> Генеральная уборка после съема квартиры от 100 руб. м2</li>
+                    </ul>
+                  </div>
+                  <div class="pricing-action">
+			  <form method = "post">
+                    {% csrf_token %}
+                    {{ shortform.as_ul }}
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
+                </div>
+              </div>
+
+              <div class="span3">
+                <div class="pricing-box-wrap animated-fast flyIn">
+                  <div class="pricing-heading">
+                    <h3>Уборка <strong>Коттеджей</strong></h3>
+                  </div>
+                  <div class="pricing-content">
+                    <ul>
+                      <li> Генеральная от 100 руб. м2</li>
+                      <li> Уборка после ремонта от 100 руб. м2</li>
+                      <li> Поддерживающая уборка 1 раз в неделю от 4000 руб. коттедж</li>
+                      <li> Уборка после пожара от 300 руб. м2</li>
+                      <li> Поддерживающая уборка 1 раз в месяцот 60 руб. м2</li>
+                    </ul>
+                  </div>
+                  <div class="pricing-action">
+			  <form method = "post">
+                    {% csrf_token %}
+                    {{ shortform.as_ul }}
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
+                </div>
+              </div>
+
+              <div class="span3">
+                <div class="pricing-box-wrap special animated-slow flyIn">
+                  <div class="pricing-heading">
+                    <h3>Уборка <strong>Офисов и помещений</strong></h3>
+                  </div>
+                  <div class="pricing-content">
+                    <ul>
+<li> Ежедневная уборка на контрактной основе от 45 руб. м2</li>
+<li> Ежедневная уборка торговых и производственных помещений на контрактной основе от 50 руб. м2</li>
+<li> Генеральная уборка после ремонта от 90 руб. м2</li>
+<li> Комплексная уборка офисов от 50 руб. м2</li>
+<li> Уборка после пожара от 300 руб. м2</li>
+<li> Уборка складских помещений после пожара от 250 руб. м2</li>
+<li> Очистка крыш от снега и наледи от 40 руб. м2</li>
+<li> Уборка прилегающих территорий в холодное время года с 1 ноября по 31 марта от 40 руб. м2</li>
+<li> Уборка прилегающих территорий в тёплое время года с 1 апреля по 31 октября от 30 руб. м2</li>
+<li> Вывоз мусора от 5000 руб. контейнер</li>
+<li> Вывоз снега от 5000 руб. контейнер</li>
+                    </ul>
+                  </div>
+                  <div class="pricing-action">
+			  <form method="post">
+                    {% csrf_token %}
+                    {{ shortform.as_ul }}
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
+                </div>
+              </div>
+
+              <div class="span3">
+                <div class="pricing-box-wrap animated flyIn">
+                  <div class="pricing-heading">
+                    <h3>Мытье <strong>Окон</strong></h3>
+                  </div>
+                  <div class="pricing-content">
+                    <ul>
+<li> До 100 м2 от 250 руб. м2</li>
+<li> В жилых квартирах и домах от 250 руб. м2</li>
+<li> От 200 м2 до 1000 м2 от 150 руб. м2</li>
+<li> От 1000 м2 и выше от 80 руб. м2</li>
+<li> С применением высотных работ от 2000 м2 от 75 руб. м2</li>
+<li> Мойка окон с применением высотных работ от 2000 м2 от 75 руб. м2</li>
+<li> После ремонта от 300 руб. м2</li>
+<li> После строя и капитального ремонта от 500 руб. м2</li>
+<li> Мойка витрин и вывесок от 55 руб. м2</li>
+<li> Мойка фасадов от 50 руб. м2</li>
+<li> Мойка тротуаров с применением роторной машины от 50 руб. м2</li>
+                    </ul>
+                  </div>
+                  <div class="pricing-action">
+			  <form method="post">
+                    {% csrf_token %}
+                    {{ shortform.as_ul }}
+                    <button type="submit" class="btn btn-medium btn-success"> Заказать звонок</button>
+			  </form>
+		  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="row">
+          <div class="span12 aligncenter">
+            <h3 class="title">Наши <strong>исполнитель</strong></h3>
+            <div class="blankline30"></div>
+ 
+            <ul class="bxslider">
+              <li>
+                <blockquote>
+			несколько слов о себе
+                </blockquote>
+                <div class="testimonial-autor">
+			<img src="{% static 'img/dummies/testimonial/1.png' %}" alt="" />
+                  <h4>Hillary Doe</h4>
+                  <a href="#">www.companyname.com</a>
+                </div>
+              </li>
+              <li>
+                <blockquote>
+			несколько слов о себе
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </blockquote>
+                <div class="testimonial-autor">
+			<img src="{% static 'img/dummies/testimonial/2.png' %}" alt="" />
+                  <h4>Michael Doe</h4>
+                  <a href="#">www.companyname.com</a>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="works">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h4 class="title">Последние <strong>Работы</strong></h4>
+            <div class="row">
+
+              <div class="grid cs-style-4">
+                <div class="span3">
+                  <div class="item">
+                    <figure>
+			    <div><img src="{% static 'img/dummies/works/1.jpg' %}" alt="" /></div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span3">
+                  <div class="item">
+                    <figure>
+			    <div><img src="{% static 'img/dummies/works/2.jpg' %}" alt="" /></div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span3">
+                  <div class="item">
+                    <figure>
+			    <div><img src="{% static 'img/dummies/works/3.jpg' %}" alt="" /></div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="span3">
+                  <div class="item">
+                    <figure>
+			    <div><img src="{% static 'img/dummies/works/4.jpg' %}" alt="" /></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          </div>
+          <div class="span4">
+            <div class="widget">
+              <h5 class="widgetheading">Связаться с нами</h5>
+              <address>
+							<strong>Москва</strong><br>
+						</address>
+              <p>
+                <i class="icon-phone"></i> (+7) 926-689-1658 <br>
+                <i class="icon-envelope-alt"></i> email@domainname.com
+              </p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="widget">
+              <h5 class="widgetheading">Заказать звонок</h5>
+              <p>
+                Введите ваш телефон и в ближайшее время мы с вами свяжемся
+              </p>
+	    </div>
+	  </div>
+	  <div class="span4">
+              <form class="subscribe">
+                <div class="input-append">
+                    {{ shortform.as_ul }}
+                  <button class="btn btn-success" type="submit">Заказать звонок</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="span6">
+              <div class="copyright">
+                <p><span>&copy; Все права защищены 2019</span></p>
+              </div>
+
+            </div>
+
+            <div class="span6">
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Eterna
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bglight icon-2x active"></i></a>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+
+  <script src="{% static 'js/modernizr.custom.js' %}"></script>
+  <script src="{% static 'js/toucheffects.js' %}"></script>
+  <script src="{% static 'js/google-code-prettify/prettify.js' %}"></script>
+  <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+  <script src="{% static 'js/camera/camera.js' %}"></script>
+  <script src="{% static 'js/camera/setting.js' %}"></script>
+
+  <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+  <script src="{% static 'js/portfolio/jquery.quicksand.js' %}"></script>
+  <script src="{% static 'js/portfolio/setting.js' %}"></script>
+
+  <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+  <script src="{% static 'js/animate.js' %}"></script>
+  <script src="{% static 'js/inview.js' %}"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
