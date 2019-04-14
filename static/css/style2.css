@@ -46,3 +46,6 @@ i.icon-bgdark.active {
 	color: white;
 	font-style: oblique;
 }
+.camera_caption {
+	padding-top: 2%;
+}
