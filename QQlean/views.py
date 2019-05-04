@@ -26,7 +26,7 @@ def index(request):
         if phone:
             try:
                 send_mail(phone, "phone: %s" % (phone),
-                          settings.EMAIL_HOST_USER, ['aleksauto.info@gmail.com'])
+                          settings.EMAIL_HOST_USER, ['zlatochka1972@bk.ru'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect('/')
@@ -41,7 +41,7 @@ def index(request):
         if phonesh:
             try:
                 send_mail(phonesh, "phone: %s" % (phonesh),
-                          settings.EMAIL_HOST_USER, ['aleksauto.info@gmail.com'])
+                          settings.EMAIL_HOST_USER, ['zlatochka1972@bk.ru'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect('/')
